@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="" />
+    <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +25,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -57,10 +66,26 @@
       <option name="presentableId" value="Default" />
       <updated>1568580240716</updated>
       <workItem from="1568580245168" duration="2237000" />
+      <workItem from="1568658386798" duration="599000" />
+      <workItem from="1568659825818" duration="618000" />
+      <workItem from="1568667988066" duration="2470000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
