@@ -18,6 +18,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
     <junit.version>4.11</junit.version>
     <slf4j.version>1.7.28</slf4j.version>
+    <sax.version>2.0.1</sax.version>
   </properties>
 
   <dependencies>
@@ -39,6 +40,13 @@
       <artifactId>slf4j-simple</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
+<!--    Libraries-->
+      <dependency>
+          <groupId>sax</groupId>
+          <artifactId>sax</artifactId>
+          <version>${sax.version}</version>
+      </dependency>
+
 
   </dependencies>
 

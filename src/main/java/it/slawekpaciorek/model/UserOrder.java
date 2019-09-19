@@ -9,10 +9,12 @@ import java.util.Objects;
 
 public class UserOrder {
 
-    Logger logger = LoggerFactory.getLogger(UserOrder.class);
+    private Logger logger = LoggerFactory.getLogger(UserOrder.class);
 
     int userId;
+
     long requestId;
+
     List<Product> productList;
 
     public UserOrder(){
