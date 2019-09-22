@@ -53,6 +53,7 @@ public class InMemoryDB {
 
         logger.debug("Adding order : " + order.toString() + " to database.");
         orders.add(order);
+        addUser(new User(order.getUserId()));
     }
 
 

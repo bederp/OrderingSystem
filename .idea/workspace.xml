@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/command/AppManagement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/views/ConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +66,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.slawekpaciorek.command" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
@@ -81,7 +85,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.XMLFileParser">
+  <component name="RunManager" selected="Application.InMemoryDBService">
     <configuration name="CSVFileParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.parsers.CSVFileParser" />
       <module name="ordering_system" />
@@ -101,6 +105,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryDBService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.services.InMemoryDBService" />
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -136,6 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InMemoryDBService" />
         <item itemvalue="Application.XMLFileParser" />
         <item itemvalue="Application.CSVFileParser" />
         <item itemvalue="Application.User" />
@@ -159,7 +177,10 @@
       <workItem from="1568667988066" duration="3599000" />
       <workItem from="1568742468110" duration="10327000" />
       <workItem from="1568828824350" duration="8002000" />
-      <workItem from="1568917175144" duration="6735000" />
+      <workItem from="1568917175144" duration="8073000" />
+      <workItem from="1569003728618" duration="670000" />
+      <workItem from="1569103296616" duration="2497000" />
+      <workItem from="1569152655074" duration="7515000" />
     </task>
     <servers />
   </component>
@@ -181,16 +202,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java</url>
-          <line>129</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

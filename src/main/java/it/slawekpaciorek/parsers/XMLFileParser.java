@@ -74,7 +74,7 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
             bClientId = false;
 
         } else if (bRequestId) {
-            userOrder.setRequestId(Long.valueOf(xmlData.toString()));
+            userOrder.setRequestId(Long.parseLong(xmlData.toString()));
             bRequestId = false;
 
         } else if (bName) {

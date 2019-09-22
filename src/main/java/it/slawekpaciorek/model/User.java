@@ -31,6 +31,10 @@ public class User {
         logger.info("Creating USER with id number : " + idNumber);
     }
 
+    public User(int userId) {
+        this.idNumber = userId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
