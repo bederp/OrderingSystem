@@ -1,5 +1,7 @@
 package it.slawekpaciorek.parsers;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import it.slawekpaciorek.model.Product;
 import it.slawekpaciorek.model.UserOrder;
 import org.slf4j.Logger;
@@ -11,8 +13,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -126,10 +127,42 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
         return userOrders;
     }
 
+    @Override
+    public void parseToFile(List<UserOrder> orders, String path, String fileName) throws IOException {
+
+        File file = new File(path + fileName + ".xml");
+        ObjectMapper mapper = new XmlMapper();
+        FileWriter writer = new FileWriter(file);
+
+        writer.append("<Requests>");
+
+        try {
+            for (UserOrder order : orders) {
+                String xml = mapper.writeValueAsString(order);
+                writer.write(xml);
+            }
+            System.out.println(file.getAbsolutePath());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        writer.append("</Requests>");
+
+        writer.flush();
+        writer.close();
+
+    }
+
     public static void main(String[] args) throws SAXException {
 
         List<UserOrder>orders = new XMLFileParser().parsDataFromFile();
 
         System.out.println(orders);
+
+        try {
+            new XMLFileParser().parseToFile(orders, "/home/slawekpaciorek/Dokumenty/","raport5_xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/command/AppManagement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/views/ConsoleView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ErrorManagment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/raport5_xml.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/AppManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/AppManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/views/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/views/ConsoleView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,11 +74,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="it.slawekpaciorek.command" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.slawekpaciorek.controllers" />
+      <recent name="it.slawekpaciorek.command" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -85,13 +94,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.InMemoryDBService">
-    <configuration name="CSVFileParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.parsers.CSVFileParser" />
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.App" />
       <module name="ordering_system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.slawekpaciorek.parsers.*" />
+          <option name="PATTERN" value="it.slawekpaciorek.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -99,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InMemoryDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.repo.InMemoryDB" />
+    <configuration name="CSVFileParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.parsers.CSVFileParser" />
       <module name="ordering_system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
+          <option name="PATTERN" value="it.slawekpaciorek.parsers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -153,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.InMemoryDBService" />
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.XMLFileParser" />
         <item itemvalue="Application.CSVFileParser" />
+        <item itemvalue="Application.InMemoryDBService" />
         <item itemvalue="Application.User" />
-        <item itemvalue="Application.InMemoryDB" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +189,13 @@
       <workItem from="1568917175144" duration="8073000" />
       <workItem from="1569003728618" duration="670000" />
       <workItem from="1569103296616" duration="2497000" />
-      <workItem from="1569152655074" duration="7515000" />
+      <workItem from="1569152655074" duration="12667000" />
+      <workItem from="1569270941724" duration="514000" />
+      <workItem from="1569341765300" duration="253000" />
+      <workItem from="1569342159428" duration="39000" />
+      <workItem from="1569342660034" duration="9330000" />
+      <workItem from="1569360415879" duration="245000" />
+      <workItem from="1569441724782" duration="9027000" />
     </task>
     <servers />
   </component>
@@ -202,5 +217,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java</url>
+          <line>161</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -19,6 +19,7 @@
     <junit.version>4.11</junit.version>
     <slf4j.version>1.7.28</slf4j.version>
     <sax.version>2.0.1</sax.version>
+    <jackson.version>2.9.9</jackson.version>
   </properties>
 
   <dependencies>
@@ -45,6 +46,11 @@
           <groupId>sax</groupId>
           <artifactId>sax</artifactId>
           <version>${sax.version}</version>
+      </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.dataformat</groupId>
+          <artifactId>jackson-dataformat-xml</artifactId>
+          <version>${jackson.version}</version>
       </dependency>
 
 

@@ -23,7 +23,7 @@ public class InMemoryDBService {
 
     private double getValueForOrders(List<UserOrder> orders){
         return orders.stream()
-                .mapToDouble(x -> x.getProductList()
+                .mapToDouble(x -> x.getProducts()
                         .stream()
                         .mapToDouble(i -> i.getPrice()*i.getQuantity())
                         .sum())
@@ -52,7 +52,7 @@ public class InMemoryDBService {
             System.out.printf("%18s|", "Product price");
             System.out.printf("%18s|", "Product summary");
             System.out.println("\n----------------------------------------------------------------------------------------------------------------------------------");
-            for(Product product : order.getProductList()){
+            for(Product product : order.getProducts()){
                 System.out.printf("%18s|", order.getRequestId());
                 System.out.printf("%18s|", order.getUserId());
                 System.out.printf("%18s|", product.getName());
@@ -61,7 +61,7 @@ public class InMemoryDBService {
                 System.out.printf("%18s|", product.getQuantity()*product.getPrice());
                 System.out.println();
             }
-            System.out.println("\n\tOrder summary : " + order.getProductList().stream().mapToDouble(x-> x.getPrice()*x.getQuantity()).sum());
+            System.out.println("\n\tOrder summary : " + order.getProducts().stream().mapToDouble(x-> x.getPrice()*x.getQuantity()).sum());
             System.out.println("----------------------------------------------------------------------------------------------------------------------------------");
         }
     }

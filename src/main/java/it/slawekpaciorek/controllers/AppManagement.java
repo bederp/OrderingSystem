@@ -7,20 +7,32 @@ import java.util.Map;
 
 public class AppManagement {
 
-    private final Map<String, Object> commands;
+    private Map<String, Object> commandMap;
 
-    public static AppManagement management(){
-
-        AppManagement manager = new AppManagement();
-
-        manager.commands.put("menu", new ConsoleView());
-
-        return manager;
-
+    public AppManagement(){
+        commandMap = new HashMap<>();
     }
 
-    private AppManagement(){
-        commands = new HashMap<>();
+    public AppManagement managementInit(){
+
+        AppManagement management = new AppManagement();
+
+        commandMap.put("menu", new ConsoleView());
+        commandMap.put("order", new OrdersManagment());
+        commandMap.put("stats", new StatsManagment());
+        commandMap.put("error", new ErrorManagment());
+        commandMap.put("exit", true);
+
+        return management;
+    }
+
+    public void runWithParameter(String string){
+
+        if(!commandMap.containsKey(string))
+            string = "error";
+
+        commandMap.get(string);
+
     }
 
 

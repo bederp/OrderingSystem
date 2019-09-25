@@ -1,21 +1,33 @@
 package it.slawekpaciorek.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@JacksonXmlRootElement(localName = "request")
 public class UserOrder {
 
+    @JsonIgnore
     private Logger logger = LoggerFactory.getLogger(UserOrder.class);
 
+    @JacksonXmlProperty(localName = "user_id")
     int userId;
 
+    @JacksonXmlProperty(localName = "request_id")
     long requestId;
 
-    List<Product> productList;
+    @JacksonXmlElementWrapper(localName = "products")
+    @JacksonXmlProperty(localName = "product")
+    List<Product> products;
 
     public UserOrder(){
         logger.info("Creating empty USER ORDER");
@@ -23,7 +35,7 @@ public class UserOrder {
 
     public UserOrder(int userId, String name, List<Product> productList) {
         this.userId = userId;
-        this.productList = productList;
+        this.products = productList;
 
         logger.info("Creating USER ORDER by user with id number : " + userId);
     }
@@ -33,7 +45,7 @@ public class UserOrder {
         return "\nUserOrder{" +
                 "userId=" + userId +
                 ", requestId=" + requestId +
-                ", productList=" + productList +
+                ", productList=" + products +
                 '}';
     }
 
@@ -75,18 +87,18 @@ public class UserOrder {
         this.requestId = requestId;
     }
 
-    public List<Product> getProductList() {
-        return productList;
+    public List<Product> getProducts() {
+        return products;
     }
 
-    public void setProductList(List<Product> productList) {
-        this.productList = productList;
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     public void addProductTOList(Product product){
-        if(productList == null)
-            setProductList(new ArrayList<>());
+        if(products == null)
+            setProducts(new ArrayList<>());
         logger.info("Adding product : " + product.toString() + "to list");
-        productList.add(product);
+        products.add(product);
     }
 }

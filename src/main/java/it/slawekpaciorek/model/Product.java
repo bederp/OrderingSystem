@@ -1,16 +1,24 @@
 package it.slawekpaciorek.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Objects;
+
 
 public class Product {
 
+    @JsonIgnore
     Logger logger = LoggerFactory.getLogger(Product.class);
 
     String name;
+
     int quantity;
+
     Double price;
 
     public Product(){

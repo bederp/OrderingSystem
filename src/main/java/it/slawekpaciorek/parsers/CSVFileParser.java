@@ -7,6 +7,9 @@ import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -56,11 +59,36 @@ public class CSVFileParser implements FileParser {
         return orders;
     }
 
-    public static void main(String[] args) {
+    @Override
+    public void parseToFile(List<UserOrder> collection,String path, String fileName) {
 
-        List orders = new CSVFileParser().parsDataFromFile();
+        String title = "New report : " + LocalDate.now().toString();
+        String columns = "Request_id,Client_id,Product_name,Quantity,Price";
 
-        System.out.println(orders);
+        try {
+
+            File file = new File(path + fileName + ".csv");
+
+            if(file.createNewFile()) {
+                FileWriter fileWriter = new FileWriter(file.getAbsolutePath());
+
+                fileWriter.append(title).append("\n").append(columns).append("\n");
+
+                for (UserOrder element : collection) {
+                    for (Product product : element.getProducts()) {
+                        String line = element.getRequestId() + "," + element.getUserId() + "," + product.getName() + "," + product.getQuantity() + "," + product.getPrice() + "\n";
+                        fileWriter.append(line);
+                    }
+                }
+
+                fileWriter.flush();
+                fileWriter.close();
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
