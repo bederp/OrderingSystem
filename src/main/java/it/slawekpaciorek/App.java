@@ -1,6 +1,7 @@
 package it.slawekpaciorek;
 
-import it.slawekpaciorek.controllers.AppManagement;
+import it.slawekpaciorek.controllers.CommandSettings;
+import it.slawekpaciorek.views.ConsoleView;
 
 import java.util.Scanner;
 
@@ -8,26 +9,25 @@ import java.util.Scanner;
 public class App {
 
 
-
     public static void main( String[] args )
     {
 
-        AppManagement manager = new AppManagement();
-        manager.managementInit();
+        CommandSettings commander = new CommandSettings();
+        commander.settingsInit();
 
         boolean stop = false;
         Scanner commands = new Scanner(System.in);
 
         while (!stop){
 
-            manager.runWithParameter("menu");
+            commander.runWithParameter("menu");
 
-            System.out.print("Wpisz polecenie : ");
+            ConsoleView.printQueryForQuestion();
             String consoleInput = commands.next();
 
             stop = consoleInput.equals("exit");
 
-            manager.runWithParameter(consoleInput);
+            commander.runWithParameter(consoleInput);
 
 
         }

@@ -40,10 +40,7 @@ public class User {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return name.equals(user.name) &&
-                lastName.equals(user.lastName) &&
-                idNumber == (user.idNumber) &&
-                email.equals(user.email);
+        return idNumber == user.idNumber;
     }
 
     @Override

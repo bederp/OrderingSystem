@@ -9,19 +9,19 @@ import java.util.stream.Collectors;
 
 public class InMemoryDBService {
 
-    private List<UserOrder> findOrderForUser(long userId){
+    public List<UserOrder> findOrderForUser(long userId){
         return InMemoryDB.getOrders().stream().filter(x -> x.getUserId() == userId).collect(Collectors.toList());
     }
 
-    private List<UserOrder> findAllOrders(){
+    public List<UserOrder> findAllOrders(){
         return InMemoryDB.getOrders();
     }
 
-    private int getAmountOfOrders(List<UserOrder> orders){
+    public int getAmountOfOrders(List<UserOrder> orders){
         return orders.size();
     }
 
-    private double getValueForOrders(List<UserOrder> orders){
+    public double getValueForOrders(List<UserOrder> orders){
         return orders.stream()
                 .mapToDouble(x -> x.getProducts()
                         .stream()
@@ -30,15 +30,15 @@ public class InMemoryDBService {
                 .sum();
     }
 
-    private double getAverageForOrders(List<UserOrder> orders){
+    public double getAverageForOrders(List<UserOrder> orders){
         if(getAmountOfOrders(orders) < 1){
             return 0;
         }
         return getValueForOrders(orders) / getAmountOfOrders(orders);
     }
 
-    private boolean checkForUser(long id){
-        return InMemoryDB.getUsers().stream().anyMatch(x->x.getIdNumber() == id);
+    public boolean checkForUser(long id){
+        return InMemoryDB.getUsers().stream().noneMatch(x -> x.getIdNumber() == id);
     }
 
     public void displayOrders(List<UserOrder> orders){
@@ -66,43 +66,53 @@ public class InMemoryDBService {
         }
     }
 
-    public void printAmountOfAllOrders() {
-        System.out.println("Amount of orders in all database : " + getAmountOfOrders(findAllOrders()));
+    public String printAmountOfAllOrders() {
+        return ("************************************************************" +
+                            "\n\tAmount of orders in all database : " + getAmountOfOrders(findAllOrders()) +
+                            "\n************************************************************"
+        );
     }
 
-    public void printAmountOFOrdersForSpecificUser(long id_Number){
+    public String printAmountOFOrdersForSpecificUser(long id_Number){
 
-        if (!checkForUser(id_Number))
-            System.out.println("There is no user with ID numbaer = " + id_Number);
+        if (checkForUser(id_Number))
+            return("There is no user with ID numbaer = " + id_Number);
 
-        System.out.println("Amount of all orders for User with id number = " + id_Number + " : " + getAmountOfOrders(findOrderForUser(id_Number)) );
+        return ("************************************************************" +
+                            "\n\tAmount of all orders for User with id number = " + id_Number + " : " + getAmountOfOrders(findOrderForUser(id_Number)) +
+                            "\n************************************************************");
     }
 
-    public void valueOfAllOrders(){
-        System.out.println("Total value for all orders : " + getValueForOrders(findAllOrders()));
+    public String valueOfAllOrders(){
+        return ("************************************************************"+
+                            "\n\tTotal value for all orders : " + getValueForOrders(findAllOrders()) +
+                            "\n************************************************************");
     }
 
-    public void valueOfAllOrdersForSpecificuser(long idNumber){
+    public String valueOfAllOrdersForSpecificuser(long idNumber){
 
-        if (!checkForUser(idNumber))
-            System.out.println("There is no user with ID numbaer = " + idNumber);
+        if (checkForUser(idNumber))
+            return("There is no user with ID numbaer = " + idNumber);
 
-        System.out.println("Total value for all orders for USER with id = " + idNumber + " : " + getValueForOrders(findOrderForUser(idNumber)));
+        return("************************************************************" +
+                "\n\tTotal value for all orders for USER with id = " + idNumber + " : " + getValueForOrders(findOrderForUser(idNumber)) +
+                "\n************************************************************");
     }
 
-    public void getAverageValueForAllOrders(){
-        System.out.println("Average value for all orders : " + getAverageForOrders(findAllOrders()));
+    public String getAverageValueForAllOrders(){
+        return  ("************************************************************" +
+                "\n\tAverage value for all orders : " + getAverageForOrders(findAllOrders()) +
+                "\n************************************************************");
     }
 
-    public void getAverageValueForOrdersForSpecificUser(long idNumber){
+    public String getAverageValueForOrdersForSpecificUser(long idNumber){
 
-        if (!checkForUser(idNumber))
-            System.out.println("There is no user with ID numbaer = " + idNumber);
+        if (checkForUser(idNumber))
+            return ("There is no user with ID numbaer = " + idNumber);
 
-        System.out.println("Average value for all orders for USER with id=" + idNumber + " : " + getAverageForOrders(findOrderForUser(idNumber)));
+        return ("************************************************************" +
+                "\n\tAverage value for all orders for USER with id=" + idNumber + " : " + getAverageForOrders(findOrderForUser(idNumber))+
+                "\n************************************************************");
     }
-
-
-
 
 }

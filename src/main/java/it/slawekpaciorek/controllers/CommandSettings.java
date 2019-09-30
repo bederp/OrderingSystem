@@ -5,23 +5,23 @@ import it.slawekpaciorek.views.ConsoleView;
 import java.util.HashMap;
 import java.util.Map;
 
-public class AppManagement {
+public class CommandSettings {
 
-    private Map<String, Object> commandMap;
+    private Map<String, AppManager> commandMap;
 
-    public AppManagement(){
+    public CommandSettings(){
         commandMap = new HashMap<>();
     }
 
-    public AppManagement managementInit(){
+    public CommandSettings settingsInit(){
 
-        AppManagement management = new AppManagement();
+        CommandSettings management = new CommandSettings();
 
-        commandMap.put("menu", new ConsoleView());
+        commandMap.put("menu", () -> ConsoleView.printMenu());
         commandMap.put("order", new OrdersManagment());
         commandMap.put("stats", new StatsManagment());
         commandMap.put("error", new ErrorManagment());
-        commandMap.put("exit", true);
+        commandMap.put("exit", () -> ConsoleView.exitView());
 
         return management;
     }
@@ -31,7 +31,7 @@ public class AppManagement {
         if(!commandMap.containsKey(string))
             string = "error";
 
-        commandMap.get(string);
+        commandMap.get(string).executeCommand();
 
     }
 

@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ErrorManagment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/raport5_xml.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/AppManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/AppManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/AppManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/AppManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/CommandSettings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ErrorManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ErrorManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/views/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/views/ConsoleView.java" afterDir="false" />
     </list>
@@ -46,8 +43,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -195,7 +192,11 @@
       <workItem from="1569342159428" duration="39000" />
       <workItem from="1569342660034" duration="9330000" />
       <workItem from="1569360415879" duration="245000" />
-      <workItem from="1569441724782" duration="9027000" />
+      <workItem from="1569441724782" duration="9292000" />
+      <workItem from="1569523252531" duration="1679000" />
+      <workItem from="1569531529422" duration="1270000" />
+      <workItem from="1569778855736" duration="13735000" />
+      <workItem from="1569874069393" duration="4590000" />
     </task>
     <servers />
   </component>
@@ -225,11 +226,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java</url>
           <line>161</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

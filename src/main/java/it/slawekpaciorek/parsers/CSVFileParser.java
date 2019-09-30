@@ -91,4 +91,23 @@ public class CSVFileParser implements FileParser {
 
     }
 
+    public void parseToFile(String msg, String fileName, String filePath, String reportType){
+
+        String title = reportType + " : " + LocalDate.now().toString();
+
+        try{
+            File file = new File(filePath + fileName + ".csv");
+
+            if(file.createNewFile()){
+                FileWriter writer = new FileWriter(file.getAbsolutePath());
+                writer.append(title).append("\n").append(msg);
+
+                writer.flush();
+                writer.close();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
