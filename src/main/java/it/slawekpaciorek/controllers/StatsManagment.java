@@ -2,10 +2,9 @@ package it.slawekpaciorek.controllers;
 
 import it.slawekpaciorek.parsers.CSVFileParser;
 import it.slawekpaciorek.services.InMemoryDBService;
-import it.slawekpaciorek.views.ConsoleView;
+import it.slawekpaciorek.config.ConsoleView;
 
 
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -67,7 +66,7 @@ public class StatsManagment implements AppManager{
             ConsoleView.printBackInfo();
             ConsoleView.printQueryForQuestion();
 
-            input = scanner.nextLine();
+            input = scanner.next();
 
         }
 
@@ -106,7 +105,7 @@ public class StatsManagment implements AppManager{
     private void queryForExportToCSVFile(String message, String reportType){
 
         System.out.println("Czy chcesz wyeksportować raport do pliku CSV ? (yes/no)");
-        String input = scanner.nextLine();
+        String input = scanner.next();
 
         if(input.equalsIgnoreCase("yes")){
             

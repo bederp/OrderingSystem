@@ -2,9 +2,8 @@ package it.slawekpaciorek.controllers;
 
 import it.slawekpaciorek.model.UserOrder;
 import it.slawekpaciorek.parsers.CSVFileParser;
-import it.slawekpaciorek.repo.InMemoryDB;
 import it.slawekpaciorek.services.InMemoryDBService;
-import it.slawekpaciorek.views.ConsoleView;
+import it.slawekpaciorek.config.ConsoleView;
 
 import java.util.List;
 import java.util.Scanner;
@@ -49,18 +48,17 @@ public class OrdersManagment implements AppManager {
             }
 
 
-
             ConsoleView.printOrdersModule();
             ConsoleView.printBackInfo();
             ConsoleView.printQueryForQuestion();
-            input = scanner.nextLine();
+            input = scanner.next();
         }
     }
 
     private void queryForRaports(List<UserOrder> orders){
 
         System.out.println("Czy chcesz wyeksportować raport do pliku CSV ? (yes/no)");
-        String input = scanner.nextLine();
+        String input = scanner.next();
 
         if(input.equalsIgnoreCase("yes")){
 

@@ -1,4 +1,4 @@
-package it.slawekpaciorek.views;
+package it.slawekpaciorek.config;
 
 public class ConsoleView {
 

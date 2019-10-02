@@ -40,7 +40,6 @@ public class InMemoryDB {
         if(orders == null) {
             logger.warn("Orders list is not initialized, initializing list");
             orders = new ArrayList<>();
-            new CSVFileParser().parsDataFromFile().stream().forEach(x -> addOrder(x));
         }
 
         logger.debug("Accessing to orders list");

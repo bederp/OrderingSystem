@@ -17,6 +17,7 @@ import java.util.Scanner;
 public class CSVFileParser implements FileParser {
 
     Logger logger = LoggerFactory.getLogger(CSVFileParser.class);
+    private File file;
 
     @Override
     public List<UserOrder> parsDataFromFile() {
@@ -25,7 +26,7 @@ public class CSVFileParser implements FileParser {
         Scanner scanner = null;
 
         try {
-            scanner = new Scanner(new File(getClass().getClassLoader().getResource("order_import.csv").getFile()));
+            scanner = new Scanner(file);
             scanner.next();
         } catch (FileNotFoundException e) {
             logger.error("File not found");
@@ -110,4 +111,7 @@ public class CSVFileParser implements FileParser {
         }
     }
 
+    public void setFile(File file) {
+        this.file = file;
+    }
 }

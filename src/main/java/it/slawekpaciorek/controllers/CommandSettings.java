@@ -1,6 +1,6 @@
 package it.slawekpaciorek.controllers;
 
-import it.slawekpaciorek.views.ConsoleView;
+import it.slawekpaciorek.config.ConsoleView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,17 +13,13 @@ public class CommandSettings {
         commandMap = new HashMap<>();
     }
 
-    public CommandSettings settingsInit(){
+    public void settingsInit(){
 
-        CommandSettings management = new CommandSettings();
-
-        commandMap.put("menu", () -> ConsoleView.printMenu());
+        commandMap.put("menu", ConsoleView::printMenu);
         commandMap.put("order", new OrdersManagment());
         commandMap.put("stats", new StatsManagment());
-        commandMap.put("error", new ErrorManagment());
-        commandMap.put("exit", () -> ConsoleView.exitView());
+        commandMap.put("exit", ConsoleView::exitView);
 
-        return management;
     }
 
     public void runWithParameter(String string){

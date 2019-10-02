@@ -1,38 +1,44 @@
 package it.slawekpaciorek;
 
 import it.slawekpaciorek.controllers.CommandSettings;
-import it.slawekpaciorek.views.ConsoleView;
+import it.slawekpaciorek.repo.InMemoryDB;
+import it.slawekpaciorek.config.ConsoleView;
+import it.slawekpaciorek.config.StartUpConfiguration;
 
 import java.util.Scanner;
 
 
 public class App {
 
+    public static void main( String[] args ) {
 
-    public static void main( String[] args )
-    {
+        new StartUpConfiguration().configuration(args);
 
-        CommandSettings commander = new CommandSettings();
-        commander.settingsInit();
+        if(InMemoryDB.getOrders().size() > 0){
 
-        boolean stop = false;
-        Scanner commands = new Scanner(System.in);
+            CommandSettings commander = new CommandSettings();
+            commander.settingsInit();
 
-        while (!stop){
+            boolean stop = false;
+            Scanner commands = new Scanner(System.in);
 
-            commander.runWithParameter("menu");
+            while (!stop){
 
-            ConsoleView.printQueryForQuestion();
-            String consoleInput = commands.next();
+                commander.runWithParameter("menu");
 
-            stop = consoleInput.equals("exit");
+                ConsoleView.printQueryForQuestion();
+                String consoleInput = commands.next();
 
-            commander.runWithParameter(consoleInput);
+                stop = consoleInput.equals("exit");
 
+                commander.runWithParameter(consoleInput);
+
+
+            }
+
+            commands.close();
 
         }
-
-        commands.close();
 
     }
 }

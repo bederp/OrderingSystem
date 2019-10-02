@@ -20,7 +20,7 @@ import java.util.List;
 public class XMLFileParser extends DefaultHandler implements FileParser {
 
     private Logger logger = LoggerFactory.getLogger(XMLFileParser.class);
-    private File file = new File(getClass().getClassLoader().getResource("order_import.xml").getFile());
+    private File file;
 
     private UserOrder userOrder = null;
     private Product product = null;
@@ -164,5 +164,9 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void setFile(File file) {
+        this.file = file;
     }
 }
