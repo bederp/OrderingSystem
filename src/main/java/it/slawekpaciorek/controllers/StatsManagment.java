@@ -66,7 +66,7 @@ public class StatsManagment implements AppManager{
             ConsoleView.printBackInfo();
             ConsoleView.printQueryForQuestion();
 
-            input = scanner.next();
+            input = scanner.nextLine();
 
         }
 
@@ -105,15 +105,15 @@ public class StatsManagment implements AppManager{
     private void queryForExportToCSVFile(String message, String reportType){
 
         System.out.println("Czy chcesz wyeksportować raport do pliku CSV ? (yes/no)");
-        String input = scanner.next();
+        String input = scanner.nextLine();
 
         if(input.equalsIgnoreCase("yes")){
             
             System.out.println("Type in file name : ");
-            String fileName = scanner.next();
+            String fileName = scanner.nextLine();
 
             System.out.println("Type in file path : ");
-            String filePath = scanner.next();
+            String filePath = scanner.nextLine();
             
             csvFileParser.parseToFile(message, fileName, filePath, reportType);
             

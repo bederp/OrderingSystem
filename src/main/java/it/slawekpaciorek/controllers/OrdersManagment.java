@@ -31,19 +31,14 @@ public class OrdersManagment implements AppManager {
                 List<UserOrder> orders = service.findAllOrders();
                 service.displayOrders(orders);
                 queryForRaports(orders);
-            }
-            else if (validator.contains("seefor")) {
+            } else if (validator.contains("seefor")) {
 
-                long idNumber = Long.parseLong(
-                        validator.substring(6, validator.length())
-                );
+                long idNumber = Long.parseLong(validator.substring(6, validator.length()));
                 List<UserOrder> orders = service.findOrderForUser(idNumber);
+                service.displayOrders(orders);
+                queryForRaports(orders);
 
-                service.displayOrders(
-                        orders
-                );
-            }
-            else {
+            } else {
                 ConsoleView.printErrorInfo();
             }
 
@@ -51,30 +46,28 @@ public class OrdersManagment implements AppManager {
             ConsoleView.printOrdersModule();
             ConsoleView.printBackInfo();
             ConsoleView.printQueryForQuestion();
-            input = scanner.next();
+            input = scanner.nextLine();
         }
     }
 
-    private void queryForRaports(List<UserOrder> orders){
+    private void queryForRaports(List<UserOrder> orders) {
 
         System.out.println("Czy chcesz wyeksportować raport do pliku CSV ? (yes/no)");
-        String input = scanner.next();
+        String input = scanner.nextLine();
 
-        if(input.equalsIgnoreCase("yes")){
+        if (input.equalsIgnoreCase("yes")) {
 
             System.out.println("Type in file name : ");
-            String fileName = scanner.next();
+            String fileName = scanner.nextLine();
 
             System.out.println("Type in file path : ");
-            String filePath = scanner.next();
+            String filePath = scanner.nextLine();
 
             fileParser.parseToFile(orders, filePath, fileName);
 
-        }
-        else if(input.equalsIgnoreCase("no")){
+        } else if (input.equalsIgnoreCase("no")) {
             System.out.println("Przejdz do następnego okna");
-        }
-        else
+        } else
             System.out.println("Wpisałeś błędną komendę");
 
     }

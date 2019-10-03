@@ -1,0 +1,6 @@
+New report : 2019-10-03
+Request_id,Client_id,Product_name,Quantity,Price
+1,1,Bułka,1,10.0
+1,1,Chleb,2,15.0
+2,1,Chleb,5,15.0
+2,1,Bułka,1,10.0
