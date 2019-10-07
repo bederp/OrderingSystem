@@ -3,6 +3,7 @@ package it.slawekpaciorek.config;
 import it.slawekpaciorek.parsers.CSVFileParser;
 import it.slawekpaciorek.parsers.XMLFileParser;
 import it.slawekpaciorek.repo.InMemoryDB;
+import it.slawekpaciorek.services.InMemoryDBService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xml.sax.SAXException;
@@ -14,6 +15,7 @@ public class StartUpConfiguration {
     private XMLFileParser xmlParser = new XMLFileParser();
     private CSVFileParser csvParser = new CSVFileParser();
     private Logger logger = LoggerFactory.getLogger("Configuration");
+    private InMemoryDBService service = new InMemoryDBService();
 
     public void configuration(String[] arguments){
 
@@ -30,7 +32,8 @@ public class StartUpConfiguration {
 
                 try {
 
-                    xmlParser.parsDataFromFile().forEach(InMemoryDB::addOrder);
+                    service.getOrdersFromString(xmlParser.parsDataFromFile())
+                            .forEach(InMemoryDB::addOrder);
 
                 } catch (SAXException e) {
                     logger.warn("Coś poszło nie tak, przerwano operację");
@@ -48,7 +51,7 @@ public class StartUpConfiguration {
 
                 csvParser.setFile(file);
 
-                csvParser.parsDataFromFile().forEach(InMemoryDB::addOrder);
+                service.getOrdersFromString(csvParser.parsDataFromFile()).forEach(InMemoryDB::addOrder);
                 logger.info("Importowanie zakończono skucesem");
             }
 

@@ -2,12 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/services/InMemoryDBServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/parsers/CSVFileParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/repo/InMemoryDBTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/services/InMemoryDBServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/services/InMemoryDBServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +30,11 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myFlattenPackages" value="true" />
+    <option name="myAutoScrollFromSource" value="true" />
+    <option name="myElementSize" value="220" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -33,6 +49,10 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -77,10 +97,12 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="it.slawekpaciorek.repo" />
+      <recent name="it.slawekpaciorek.parsers" />
       <recent name="it.slawekpaciorek.services" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -113,38 +135,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.App" />
-      <module name="ordering_system" />
-      <option name="PROGRAM_PARAMETERS" value="order_import.csv" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.slawekpaciorek.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CSVFileParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.parsers.CSVFileParser" />
-      <module name="ordering_system" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="it.slawekpaciorek.parsers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InMemoryDBService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.services.InMemoryDBService" />
+  <component name="RunManager" selected="JUnit.InMemoryDBTest.shouldResetDataBase">
+    <configuration name="InMemoryDBServiceTest.shouldChecAVGValueForOrdersForUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ordering_system" />
       <extension name="coverage">
         <pattern>
@@ -152,55 +144,94 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.services" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.services.InMemoryDBServiceTest" />
+      <option name="METHOD_NAME" value="shouldChecAVGValueForOrdersForUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="User" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.model.User" />
+    <configuration name="InMemoryDBServiceTest.shouldRetriveDataFromString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ordering_system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.slawekpaciorek.model.*" />
+          <option name="PATTERN" value="it.slawekpaciorek.services.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.services" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.services.InMemoryDBServiceTest" />
+      <option name="METHOD_NAME" value="shouldRetriveDataFromString" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="XMLFileParser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.parsers.XMLFileParser" />
+    <configuration name="InMemoryDBTest.shouldAddOrderToDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ordering_system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.slawekpaciorek.parsers.*" />
+          <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.repo" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.repo.InMemoryDBTest" />
+      <option name="METHOD_NAME" value="shouldAddOrderToDB" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryDBTest.shouldCheckIfDBWorks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.repo" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.repo.InMemoryDBTest" />
+      <option name="METHOD_NAME" value="shouldCheckIfDBWorks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryDBTest.shouldResetDataBase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.repo" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.repo.InMemoryDBTest" />
+      <option name="METHOD_NAME" value="shouldResetDataBase" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="Application.CSVFileParser" />
-      <item itemvalue="Application.InMemoryDBService" />
-      <item itemvalue="Application.User" />
-      <item itemvalue="Application.XMLFileParser" />
+      <item itemvalue="JUnit.InMemoryDBServiceTest.shouldChecAVGValueForOrdersForUser" />
+      <item itemvalue="JUnit.InMemoryDBServiceTest.shouldRetriveDataFromString" />
+      <item itemvalue="JUnit.InMemoryDBTest.shouldCheckIfDBWorks" />
+      <item itemvalue="JUnit.InMemoryDBTest.shouldAddOrderToDB" />
+      <item itemvalue="JUnit.InMemoryDBTest.shouldResetDataBase" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.XMLFileParser" />
-        <item itemvalue="Application.CSVFileParser" />
-        <item itemvalue="Application.InMemoryDBService" />
-        <item itemvalue="Application.User" />
+        <item itemvalue="JUnit.InMemoryDBTest.shouldResetDataBase" />
+        <item itemvalue="JUnit.InMemoryDBTest.shouldAddOrderToDB" />
+        <item itemvalue="JUnit.InMemoryDBTest.shouldCheckIfDBWorks" />
+        <item itemvalue="JUnit.InMemoryDBServiceTest.shouldRetriveDataFromString" />
+        <item itemvalue="JUnit.InMemoryDBServiceTest.shouldChecAVGValueForOrdersForUser" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="showServicesTree" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -234,7 +265,14 @@
       <workItem from="1569874069393" duration="5370000" />
       <workItem from="1569954177009" duration="10449000" />
       <workItem from="1570041704160" duration="8055000" />
-      <workItem from="1570130277099" duration="3343000" />
+      <workItem from="1570130277099" duration="6114000" />
+      <workItem from="1570310972203" duration="2323000" />
+      <workItem from="1570348160515" duration="4101000" />
+      <workItem from="1570366326271" duration="5819000" />
+      <workItem from="1570395662989" duration="6846000" />
+      <workItem from="1570423208751" duration="19446000" />
+      <workItem from="1570481054272" duration="1479000" />
+      <workItem from="1570482575841" duration="451000" />
     </task>
     <servers />
   </component>
@@ -256,5 +294,53 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java</url>
+          <line>19</line>
+          <properties class="it.slawekpaciorek.config.StartUpConfiguration" method="configuration">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java</url>
+          <line>24</line>
+          <properties field="result" class="it.slawekpaciorek.parsers.XMLFileParser" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java</url>
+          <line>16</line>
+          <properties field="users" class="it.slawekpaciorek.repo.InMemoryDB" />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java</url>
+          <line>94</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="file" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="result" language="JAVA" />
+        <watch expression="orders" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OrderingSystem$App.ic" NAME="App Coverage Results" MODIFIED="1570366439938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.slawekpaciorek.config.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/OrderingSystem$InMemoryDBServiceTest.ic" NAME="InMemoryDBServiceTest Coverage Results" MODIFIED="1570448101067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.slawekpaciorek.services.*</FILTER>
+    </SUITE>
   </component>
 </project>

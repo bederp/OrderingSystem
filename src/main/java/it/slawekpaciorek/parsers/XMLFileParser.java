@@ -2,7 +2,6 @@ package it.slawekpaciorek.parsers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import it.slawekpaciorek.model.Product;
 import it.slawekpaciorek.model.UserOrder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,18 +12,17 @@ import org.xml.sax.helpers.DefaultHandler;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-import java.io.*;
-import java.util.ArrayList;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
 
 public class XMLFileParser extends DefaultHandler implements FileParser {
 
     private Logger logger = LoggerFactory.getLogger(XMLFileParser.class);
     private File file;
-
-    private UserOrder userOrder = null;
-    private Product product = null;
-    private StringBuilder xmlData = null;
+    private StringBuilder xmlData;
+    private StringBuilder result;
     private List<UserOrder> userOrders = null;
 
     private boolean bClientId = false;
@@ -36,13 +34,11 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+        xmlData = new StringBuilder();
         if (qName.equalsIgnoreCase("request")){
-            userOrder = new UserOrder();
-            product = new Product();
-
-            if(userOrders == null)
-                userOrders = new ArrayList<>();
-
+            if(result == null){
+                result = new StringBuilder();
+            }
         }
         else if(qName.equalsIgnoreCase("clientid")){
             bClientId = true;
@@ -64,44 +60,35 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
             bPrice = true;
         }
 
-        xmlData = new StringBuilder();
     }
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
 
         if (bClientId) {
-            userOrder.setUserId(Integer.parseInt(xmlData.toString()));
+            result.append(xmlData.toString()).append(",");
             bClientId = false;
 
         } else if (bRequestId) {
-            userOrder.setRequestId(Long.parseLong(xmlData.toString()));
+            result.append(xmlData.toString()).append(",");
             bRequestId = false;
 
         } else if (bName) {
-            product.setName(xmlData.toString());
+            result.append(xmlData.toString()).append(",");
             bName = false;
 
         } else if (bQuantity) {
-            product.setQuantity(Integer.parseInt(xmlData.toString()));
+            result.append(xmlData.toString()).append(",");
             bQuantity = false;
-
         }
         else if (bPrice) {
-            product.setPrice(Double.parseDouble(xmlData.toString()));
+            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             bPrice = false;
         }
-
-
-        if (qName.equalsIgnoreCase("request")) {
-            // add Employee object to list
-            if(userOrders.contains(userOrder))
-                userOrders.stream().filter(x->x.equals(userOrder)).findAny().get().addProductTOList(product);
-            else{
-                userOrder.addProductTOList(product);
-                userOrders.add(userOrder);
-            }
+        else {
+            result.append("\n");
         }
+
 
     }
 
@@ -111,7 +98,7 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
     }
 
     @Override
-    public List<UserOrder> parsDataFromFile() throws SAXException {
+    public String parsDataFromFile() throws SAXException {
         SAXParserFactory parserFactory = SAXParserFactory.newInstance();
         try{
             logger.info("Starting parsing form file : " + file.getName());
@@ -124,7 +111,8 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
         }
 
         logger.info("End parsing from file");
-        return userOrders;
+
+        return this.result.toString();
     }
 
     @Override
@@ -151,19 +139,6 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
         writer.flush();
         writer.close();
 
-    }
-
-    public static void main(String[] args) throws SAXException {
-
-        List<UserOrder>orders = new XMLFileParser().parsDataFromFile();
-
-        System.out.println(orders);
-
-        try {
-            new XMLFileParser().parseToFile(orders, "/home/slawekpaciorek/Dokumenty/","raport5_xml");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public void setFile(File file) {

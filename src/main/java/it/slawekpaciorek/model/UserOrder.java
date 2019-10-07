@@ -7,8 +7,6 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +31,15 @@ public class UserOrder {
         logger.info("Creating empty USER ORDER");
     }
 
-    public UserOrder(int userId, String name, List<Product> productList) {
+    public UserOrder(int userId, List<Product> productList) {
+        this.userId = userId;
+        this.products = productList;
+
+        logger.info("Creating USER ORDER by user with id number : " + userId);
+    }
+
+    public UserOrder(int userId,long requestId, List<Product> productList) {
+        this.requestId = requestId;
         this.userId = userId;
         this.products = productList;
 

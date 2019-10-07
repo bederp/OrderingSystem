@@ -1,9 +1,9 @@
 package it.slawekpaciorek;
 
-import it.slawekpaciorek.controllers.CommandSettings;
-import it.slawekpaciorek.repo.InMemoryDB;
 import it.slawekpaciorek.config.ConsoleView;
 import it.slawekpaciorek.config.StartUpConfiguration;
+import it.slawekpaciorek.controllers.CommandSettings;
+import it.slawekpaciorek.repo.InMemoryDB;
 
 import java.util.Scanner;
 

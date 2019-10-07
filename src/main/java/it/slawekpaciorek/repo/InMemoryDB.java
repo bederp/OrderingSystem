@@ -2,7 +2,6 @@ package it.slawekpaciorek.repo;
 
 import it.slawekpaciorek.model.User;
 import it.slawekpaciorek.model.UserOrder;
-import it.slawekpaciorek.parsers.CSVFileParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,6 +46,7 @@ public class InMemoryDB {
     }
 
     public static void addOrder(UserOrder order){
+
         if(orders == null) {
             logger.warn("Orders list is not initialized, initializing list");
             orders = new ArrayList<UserOrder>();
@@ -55,6 +55,12 @@ public class InMemoryDB {
         logger.debug("Adding order : " + order.toString() + " to database.");
         orders.add(order);
         addUser(new User(order.getUserId()));
+
+    }
+
+    public static void cleanUp(){
+        logger.info("Cleaning DB");
+        orders = null;
     }
 
 

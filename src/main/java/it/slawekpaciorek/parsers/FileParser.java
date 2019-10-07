@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface FileParser {
 
-    public List<UserOrder> parsDataFromFile() throws SAXException;
+    public String parsDataFromFile() throws SAXException;
 
     public void parseToFile(List<UserOrder>  orders, String path, String fileName) throws IOException;
 

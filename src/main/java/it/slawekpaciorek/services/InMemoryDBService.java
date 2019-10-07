@@ -4,6 +4,7 @@ import it.slawekpaciorek.model.Product;
 import it.slawekpaciorek.model.UserOrder;
 import it.slawekpaciorek.repo.InMemoryDB;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -114,5 +115,39 @@ public class InMemoryDBService {
                 "\n\tAverage value for all orders for USER with id=" + idNumber + " : " + getAverageForOrders(findOrderForUser(idNumber))+
                 "\n************************************************************");
     }
+
+    public List<UserOrder> getOrdersFromString(String data) {
+        List<UserOrder> orders = new ArrayList<>();
+
+        String[] dataFromFile = data.split("\n");
+
+        for (String element : dataFromFile) {
+
+            if(element.matches("\\d+,\\d+,[A-Za-złąćĆżŻóęźŹśŚ]*,\\d+,\\d+.?\\d*")) {
+                UserOrder order = new UserOrder();
+                Product product = new Product();
+                List<Product> products = order.getProducts();
+
+                String[] array = element.split(",");
+                order.setRequestId(Long.parseLong(array[1]));
+                order.setUserId(Integer.parseInt(array[0]));
+                product.setName(array[2]);
+                product.setQuantity(Integer.parseInt(array[3]));
+                product.setPrice(Double.valueOf(array[4]));
+                order.addProductTOList(product);
+
+                if (orders.contains(order)) {
+                    orders.stream().filter(x -> x.equals(order)).findAny().get().addProductTOList(product);
+                } else {
+                    orders.add(order);
+                }
+            }
+
+        }
+
+
+        return orders;
+    }
+
 
 }

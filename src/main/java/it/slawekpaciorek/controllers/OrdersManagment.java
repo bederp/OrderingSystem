@@ -1,9 +1,9 @@
 package it.slawekpaciorek.controllers;
 
+import it.slawekpaciorek.config.ConsoleView;
 import it.slawekpaciorek.model.UserOrder;
 import it.slawekpaciorek.parsers.CSVFileParser;
 import it.slawekpaciorek.services.InMemoryDBService;
-import it.slawekpaciorek.config.ConsoleView;
 
 import java.util.List;
 import java.util.Scanner;
