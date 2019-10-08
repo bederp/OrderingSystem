@@ -23,7 +23,6 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
     private File file;
     private StringBuilder xmlData;
     private StringBuilder result;
-    private List<UserOrder> userOrders = null;
 
     private boolean bClientId = false;
     private boolean bRequestId = false;
@@ -35,28 +34,23 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         xmlData = new StringBuilder();
-        if (qName.equalsIgnoreCase("request")){
-            if(result == null){
+        if (qName.equalsIgnoreCase("request")) {
+            if (result == null) {
                 result = new StringBuilder();
             }
-        }
-        else if(qName.equalsIgnoreCase("clientid")){
+        } else if (qName.equalsIgnoreCase("clientid")) {
             bClientId = true;
 
-        }
-        else if(qName.equalsIgnoreCase("requestid")){
+        } else if (qName.equalsIgnoreCase("requestid")) {
             bRequestId = true;
 
-        }
-        else if(qName.equalsIgnoreCase("name")){
+        } else if (qName.equalsIgnoreCase("name")) {
             bName = true;
 
-        }
-        else if(qName.equalsIgnoreCase("quantity")){
+        } else if (qName.equalsIgnoreCase("quantity")) {
             bQuantity = true;
 
-        }
-        else if(qName.equalsIgnoreCase("price")){
+        } else if (qName.equalsIgnoreCase("price")) {
             bPrice = true;
         }
 
@@ -80,12 +74,10 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
         } else if (bQuantity) {
             result.append(xmlData.toString()).append(",");
             bQuantity = false;
-        }
-        else if (bPrice) {
-            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
+        } else if (bPrice) {
             bPrice = false;
-        }
-        else {
+        } else {
+            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             result.append("\n");
         }
 
@@ -100,7 +92,7 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
     @Override
     public String parsDataFromFile() throws SAXException {
         SAXParserFactory parserFactory = SAXParserFactory.newInstance();
-        try{
+        try {
             logger.info("Starting parsing form file : " + file.getName());
             SAXParser parser = parserFactory.newSAXParser();
             parser.parse(file, this);
@@ -118,30 +110,36 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
     @Override
     public void parseToFile(List<UserOrder> orders, String path, String fileName) throws IOException {
 
+        logger.info("Parsing data to file");
+
         File file = new File(path + fileName + ".xml");
-        ObjectMapper mapper = new XmlMapper();
-        FileWriter writer = new FileWriter(file);
 
-        writer.append("<Requests>");
+        if (file.exists()) {
 
-        try {
-            for (UserOrder order : orders) {
-                String xml = mapper.writeValueAsString(order);
-                writer.write(xml);
+            ObjectMapper mapper = new XmlMapper();
+            FileWriter writer = new FileWriter(file);
+            writer.append("<Requests>");
+            try {
+                for (UserOrder order : orders) {
+                    String xml = mapper.writeValueAsString(order);
+                    writer.write(xml);
+                }
+                System.out.println(file.getAbsolutePath());
+            } catch (IOException e) {
+                logger.warn("Something went wrong, check Stack Trace");
+                e.printStackTrace();
             }
-            System.out.println(file.getAbsolutePath());
-        } catch (IOException e) {
-            e.printStackTrace();
+
+            writer.append("</Requests>");
+
+            writer.flush();
+            writer.close();
         }
-
-        writer.append("</Requests>");
-
-        writer.flush();
-        writer.close();
-
+        logger.info("Finished parsing data to file, check directory for report");
     }
 
     public void setFile(File file) {
+        logger.info("Setting the file for parser");
         this.file = file;
     }
 }

@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/parsers/CSVFileParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/repo/InMemoryDBTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bulid.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/InvalidComandExcpetion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ImportManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/ConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/CommandSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/CommandSettings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/FileParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/AppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/services/InMemoryDBServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/it/slawekpaciorek/services/InMemoryDBServiceTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,8 +57,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,6 +118,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.slawekpaciorek.config" />
       <recent name="it.slawekpaciorek.controllers" />
       <recent name="it.slawekpaciorek.command" />
     </key>
@@ -135,19 +135,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.InMemoryDBTest.shouldResetDataBase">
-    <configuration name="InMemoryDBServiceTest.shouldChecAVGValueForOrdersForUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.App" />
       <module name="ordering_system" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="it.slawekpaciorek.services.*" />
+          <option name="PATTERN" value="it.slawekpaciorek.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="it.slawekpaciorek.services" />
-      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.services.InMemoryDBServiceTest" />
-      <option name="METHOD_NAME" value="shouldChecAVGValueForOrdersForUser" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -217,7 +214,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.InMemoryDBServiceTest.shouldChecAVGValueForOrdersForUser" />
+      <item itemvalue="Application.App" />
       <item itemvalue="JUnit.InMemoryDBServiceTest.shouldRetriveDataFromString" />
       <item itemvalue="JUnit.InMemoryDBTest.shouldCheckIfDBWorks" />
       <item itemvalue="JUnit.InMemoryDBTest.shouldAddOrderToDB" />
@@ -225,11 +222,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.InMemoryDBTest.shouldResetDataBase" />
         <item itemvalue="JUnit.InMemoryDBTest.shouldAddOrderToDB" />
         <item itemvalue="JUnit.InMemoryDBTest.shouldCheckIfDBWorks" />
         <item itemvalue="JUnit.InMemoryDBServiceTest.shouldRetriveDataFromString" />
-        <item itemvalue="JUnit.InMemoryDBServiceTest.shouldChecAVGValueForOrdersForUser" />
       </list>
     </recent_temporary>
   </component>
@@ -272,7 +269,11 @@
       <workItem from="1570395662989" duration="6846000" />
       <workItem from="1570423208751" duration="19446000" />
       <workItem from="1570481054272" duration="1479000" />
-      <workItem from="1570482575841" duration="451000" />
+      <workItem from="1570482575841" duration="712000" />
+      <workItem from="1570483315554" duration="65000" />
+      <workItem from="1570484110960" duration="191000" />
+      <workItem from="1570509660188" duration="6870000" />
+      <workItem from="1570524505276" duration="4755000" />
     </task>
     <servers />
   </component>
@@ -298,30 +299,28 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java</url>
-          <line>19</line>
-          <properties class="it.slawekpaciorek.config.StartUpConfiguration" method="configuration">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java</url>
-          <line>24</line>
-          <properties field="result" class="it.slawekpaciorek.parsers.XMLFileParser" />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/repo/InMemoryDB.java</url>
-          <line>16</line>
-          <properties field="users" class="it.slawekpaciorek.repo.InMemoryDB" />
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java</url>
-          <line>94</line>
+          <line>104</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ImportManagement.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ImportManagement.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java</url>
+          <line>21</line>
+          <properties class="it.slawekpaciorek.parsers.CSVFileParser" method="parsDataFromFile">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

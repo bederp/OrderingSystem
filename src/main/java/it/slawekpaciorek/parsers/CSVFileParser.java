@@ -21,6 +21,8 @@ public class CSVFileParser implements FileParser {
     @Override
     public String parsDataFromFile() {
 
+        logger.info("Started parsing data...");
+
         StringBuilder builder = new StringBuilder();
         Scanner scanner = null;
 
@@ -39,8 +41,11 @@ public class CSVFileParser implements FileParser {
             String row = scanner.next();
             if (row.matches("\\d+,\\d+,[A-Za-złąćĆżŻóęźŹśŚ]*,\\d+,\\d+.?\\d*"))
                 builder.append(row).append("\n");
+            else
+                logger.warn("Invalid data in file, line skiped");
         }
 
+        logger.info("Finished parsing...");
         return builder.toString();
 
     }
@@ -49,7 +54,8 @@ public class CSVFileParser implements FileParser {
     @Override
     public void parseToFile(List<UserOrder> collection,String path, String fileName) {
 
-        String title = "New report : " + LocalDate.now().toString();
+        logger.info("Started parsing to file ...");
+        String title = "Nowy raport : " + LocalDate.now().toString();
         String columns = "Request_id,Client_id,Product_name,Quantity,Price";
 
         try {
@@ -73,12 +79,17 @@ public class CSVFileParser implements FileParser {
             }
 
         } catch (IOException e) {
+            logger.warn("Something went wrong, check StackTrace");
             e.printStackTrace();
         }
+
+        logger.info("Finished parsing data to file, check your directory for report");
 
     }
 
     public void parseToFile(String msg, String fileName, String filePath, String reportType){
+
+        logger.info("Starting parsing to file...");
 
         String title = reportType + " : " + LocalDate.now().toString();
 
@@ -93,11 +104,15 @@ public class CSVFileParser implements FileParser {
                 writer.close();
             }
         } catch (IOException e) {
+            logger.warn("Something went wrong, check StackTrace");
             e.printStackTrace();
         }
+
+        logger.info("Finished parsing...");
     }
 
     public void setFile(File file) {
+        logger.info("Setting the file");
         this.file = file;
     }
 }

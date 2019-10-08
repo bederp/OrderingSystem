@@ -3,6 +3,8 @@ package it.slawekpaciorek.services;
 import it.slawekpaciorek.model.Product;
 import it.slawekpaciorek.model.UserOrder;
 import it.slawekpaciorek.repo.InMemoryDB;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,19 +12,25 @@ import java.util.stream.Collectors;
 
 public class InMemoryDBService {
 
+    private Logger logger = LoggerFactory.getLogger("InMemoryDBService");
+
     public List<UserOrder> findOrderForUser(long userId){
+        logger.debug("Checking database for orders for USER with ID = " + userId + ".");
         return InMemoryDB.getOrders().stream().filter(x -> x.getUserId() == userId).collect(Collectors.toList());
     }
 
     public List<UserOrder> findAllOrders(){
+        logger.debug("Checking database for orders.");
         return InMemoryDB.getOrders();
     }
 
     public int getAmountOfOrders(List<UserOrder> orders){
+        logger.debug("Checking database for amount of orders.");
         return orders.size();
     }
 
     public double getValueForOrders(List<UserOrder> orders){
+        logger.debug("Calculating sum of orders.");
         return orders.stream()
                 .mapToDouble(x -> x.getProducts()
                         .stream()
@@ -32,6 +40,7 @@ public class InMemoryDBService {
     }
 
     public double getAverageForOrders(List<UserOrder> orders){
+        logger.debug("Calculating avg value for orders");
         if(getAmountOfOrders(orders) < 1){
             return 0;
         }
@@ -39,6 +48,7 @@ public class InMemoryDBService {
     }
 
     public boolean checkForUser(long id){
+        logger.debug("Checking database for user with ID = " + id + ".");
         return InMemoryDB.getUsers().stream().noneMatch(x -> x.getIdNumber() == id);
     }
 
@@ -117,6 +127,9 @@ public class InMemoryDBService {
     }
 
     public List<UserOrder> getOrdersFromString(String data) {
+
+        logger.info("Importing data from parser");
+
         List<UserOrder> orders = new ArrayList<>();
 
         String[] dataFromFile = data.split("\n");
@@ -142,10 +155,13 @@ public class InMemoryDBService {
                     orders.add(order);
                 }
             }
+            else {
+                logger.warn("Invalid data, line skiped");
+            }
 
         }
 
-
+        logger.info("Finished importing to database");
         return orders;
     }
 

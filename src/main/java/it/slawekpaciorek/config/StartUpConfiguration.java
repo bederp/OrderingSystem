@@ -19,14 +19,14 @@ public class StartUpConfiguration {
 
     public void configuration(String[] arguments){
 
-        logger.info("Startowanie aplikacji......");
+        logger.info("Starting the app ....");
 
         for(String argument : arguments){
 
             if(argument.contains(".xml")){
 
                 File file = new File(argument);
-                logger.info("Importowanie danych z pliku" + file.getName());
+                logger.info("Importing data from file :" + file.getName());
 
                 xmlParser.setFile(file);
 
@@ -36,27 +36,27 @@ public class StartUpConfiguration {
                             .forEach(InMemoryDB::addOrder);
 
                 } catch (SAXException e) {
-                    logger.warn("Coś poszło nie tak, przerwano operację");
+                    logger.warn("Something goes wrong with parser, pleas contact with service");
                     e.printStackTrace();
                 }
 
-                logger.info("Zakończono import, sukces");
+                logger.info("Successful importing data");
 
             }
 
             else if (argument.contains(".csv")){
 
                 File file = new File(argument);
-                logger.info("Import danych z pliku " + file.getName());
+                logger.info("Importing data from file : " + file.getName());
 
                 csvParser.setFile(file);
 
                 service.getOrdersFromString(csvParser.parsDataFromFile()).forEach(InMemoryDB::addOrder);
-                logger.info("Importowanie zakończono skucesem");
+                logger.info("Successful importing data");
             }
 
             else
-                logger.warn("Nie przekazałeś żadnych danych do zimportowania, program się nie uruchomi");
+                logger.warn("You didn't pass any data to import or your file has incorrect extension, pleas import data manually");
 
         }
 

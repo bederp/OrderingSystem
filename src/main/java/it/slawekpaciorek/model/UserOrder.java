@@ -28,14 +28,14 @@ public class UserOrder {
     List<Product> products;
 
     public UserOrder(){
-        logger.info("Creating empty USER ORDER");
+        logger.debug("Creating empty USER ORDER");
     }
 
     public UserOrder(int userId, List<Product> productList) {
         this.userId = userId;
         this.products = productList;
 
-        logger.info("Creating USER ORDER by user with id number : " + userId);
+        logger.debug("Creating USER ORDER by user with id number : " + userId);
     }
 
     public UserOrder(int userId,long requestId, List<Product> productList) {
@@ -43,7 +43,7 @@ public class UserOrder {
         this.userId = userId;
         this.products = productList;
 
-        logger.info("Creating USER ORDER by user with id number : " + userId);
+        logger.debug("Creating USER ORDER by user with id number : " + userId);
     }
 
     @Override
@@ -67,14 +67,6 @@ public class UserOrder {
     @Override
     public int hashCode() {
         return Objects.hash(userId, requestId);
-    }
-
-    public Logger getLogger() {
-        return logger;
-    }
-
-    public void setLogger(Logger logger) {
-        this.logger = logger;
     }
 
     public int getUserId() {
@@ -104,7 +96,7 @@ public class UserOrder {
     public void addProductTOList(Product product){
         if(products == null)
             setProducts(new ArrayList<>());
-        logger.info("Adding product : " + product.toString() + "to list");
+        logger.debug("Adding product : " + product.toString() + "to list");
         products.add(product);
     }
 }

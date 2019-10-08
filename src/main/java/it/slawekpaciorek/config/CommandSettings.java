@@ -1,6 +1,9 @@
-package it.slawekpaciorek.controllers;
+package it.slawekpaciorek.config;
 
-import it.slawekpaciorek.config.ConsoleView;
+import it.slawekpaciorek.controllers.AppManager;
+import it.slawekpaciorek.controllers.ImportManagement;
+import it.slawekpaciorek.controllers.OrdersManagment;
+import it.slawekpaciorek.controllers.StatsManagment;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,9 +19,11 @@ public class CommandSettings {
     public void settingsInit(){
 
         commandMap.put("menu", ConsoleView::printMenu);
-        commandMap.put("order", new OrdersManagment());
+        commandMap.put("orders", new OrdersManagment());
         commandMap.put("stats", new StatsManagment());
+        commandMap.put("error", new InvalidComandExcpetion());
         commandMap.put("exit", ConsoleView::exitView);
+        commandMap.put("import", new ImportManagement());
 
     }
 
@@ -28,7 +33,6 @@ public class CommandSettings {
             string = "error";
 
         commandMap.get(string).executeCommand();
-
     }
 
 

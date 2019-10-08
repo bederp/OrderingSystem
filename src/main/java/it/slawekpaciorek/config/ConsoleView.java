@@ -2,20 +2,21 @@ package it.slawekpaciorek.config;
 
 public class ConsoleView {
 
-    public static void printMenu(){
+    public static void printMenu() {
 
         System.out.println("\nOrder managment application" +
                 "\n------------------------------------------------" +
                 "\n\n\tMENU :" +
-                "\n\t1. Sprawdź zamówienia - STATS" +
-                "\n\t2. Przejdz do statystyk - ORDER" +
-                "\n\t3. Stwórz nowe zamówienie - NEW ORDER" +
+                "\n\t1. Sprawdź zamówienia - ORDERS" +
+                "\n\t2. Przejdz do statystyk - STATS" +
+                "\n\t3. Import zamówienie - IMPORT" +
+                "\n\n\t\tWPISZ 'EXIT' ABY ZAMKNĄĆ APLIKACJĘ" +
                 "\n\n------------------------------------------------");
 
 
     }
 
-    public static void printStatsModule(){
+    public static void printStatsModule() {
         System.out.println("\n *****Stats module*****" +
                 "\n------------------------------------------------" +
                 "\n\n\tMENU :" +
@@ -28,7 +29,7 @@ public class ConsoleView {
                 "\n\n------------------------------------------------");
     }
 
-    public static void printOrdersModule(){
+    public static void printOrdersModule() {
         System.out.println("\n" + "*****Order module*****" +
                 "\n------------------------------------------------" +
                 "\n\n\tMENU :" +
@@ -38,17 +39,17 @@ public class ConsoleView {
     }
 
     public static void exitView() {
-        System.out.println("\n" + "Exiting App ......");
+        System.out.println("\n" + "Zamykanie aplikacji ......");
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Goog By!");
+        System.out.println("Żegnaj !");
     }
 
-    public static void printQueryForQuestion(){
+    public static void printQueryForQuestion() {
         System.out.print("Wpisz polecenie : ");
     }
 
@@ -60,7 +61,18 @@ public class ConsoleView {
         System.out.println("\nTYPE IN 'MENU' OR 'BACK' TO MOVE BACK TO MAIN MENU");
     }
 
-    public static void printReport(String report){
+    public static void printReport(String report) {
         System.out.println("\n" + report);
+    }
+
+    public static void noOrdersInfo() {
+        System.out.println("Nie ma żadnych zamówień, zaimportuj dane.");
+    }
+
+    public static void printImportInfo() {
+        System.out.println("\n" + "*****Importing module*****" +
+                "\n------------------------------------------------" +
+                "\n\tPrzeszedłeś do modułu importu zamówień z zewnętrznego pliku , dozwolone rozszerzenia : 'xml' i 'csv'" +
+                "\n\n------------------------------------------------");
     }
 }

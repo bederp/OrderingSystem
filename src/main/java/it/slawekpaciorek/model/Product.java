@@ -19,7 +19,7 @@ public class Product {
     Double price;
 
     public Product(){
-        logger.info("Creating product : " + this.toString());
+        logger.debug("Creating product : " + this.toString());
     }
 
     public Product(String name, int quantity, Double price) {
@@ -27,7 +27,7 @@ public class Product {
         this.quantity = quantity;
         this.price = price;
 
-        logger.info("Creating product : " + this.toString());
+        logger.debug("Creating product : " + this.toString());
     }
 
     @Override
