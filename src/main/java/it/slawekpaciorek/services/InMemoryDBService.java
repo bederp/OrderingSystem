@@ -136,7 +136,7 @@ public class InMemoryDBService {
 
         for (String element : dataFromFile) {
 
-            if(element.matches("\\d+,\\d+,[A-Za-złąćĆżŻóęźŹśŚ]*,\\d+,\\d+.?\\d*")) {
+            if(element.matches("\\d+,\\d+,[A-Za-złćążęśźó]+,\\d+,\\d+.?\\d+,?")) {
                 UserOrder order = new UserOrder();
                 Product product = new Product();
                 List<Product> products = order.getProducts();

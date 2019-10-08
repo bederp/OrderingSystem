@@ -60,24 +60,24 @@ public class XMLFileParser extends DefaultHandler implements FileParser {
     public void endElement(String uri, String localName, String qName) throws SAXException {
 
         if (bClientId) {
-            result.append(xmlData.toString()).append(",");
+            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             bClientId = false;
 
         } else if (bRequestId) {
-            result.append(xmlData.toString()).append(",");
+            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             bRequestId = false;
 
         } else if (bName) {
-            result.append(xmlData.toString()).append(",");
+            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             bName = false;
 
         } else if (bQuantity) {
-            result.append(xmlData.toString()).append(",");
+            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             bQuantity = false;
         } else if (bPrice) {
+            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             bPrice = false;
         } else {
-            result.append(xmlData.toString().replaceAll("\n", "").trim()).append(",");
             result.append("\n");
         }
 

@@ -2,20 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bulid.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/InvalidComandExcpetion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ImportManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/ConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/ConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/StartUpConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/CommandSettings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/config/CommandSettings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/OrdersManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/StatsManagment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/model/UserOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulid.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bulid.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
     </list>
@@ -79,6 +68,7 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectId" id="1QtBvDIvOwQtg0Tx3r4m42fXPN3" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -273,7 +263,8 @@
       <workItem from="1570483315554" duration="65000" />
       <workItem from="1570484110960" duration="191000" />
       <workItem from="1570509660188" duration="6870000" />
-      <workItem from="1570524505276" duration="4755000" />
+      <workItem from="1570524505276" duration="7758000" />
+      <workItem from="1570551949141" duration="1547000" />
     </task>
     <servers />
   </component>
@@ -304,16 +295,6 @@
           <line>104</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ImportManagement.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/controllers/ImportManagement.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java</url>
           <line>21</line>
@@ -321,6 +302,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java</url>
+          <line>128</line>
+          <properties class="it.slawekpaciorek.services.InMemoryDBService" method="getOrdersFromString">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
