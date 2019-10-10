@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="" />
+    <list default="true" id="4f3123aa-0c7c-4fa0-a2d7-14293cfc9159" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bulid.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bulid.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/XMLFileParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,26 +19,99 @@
       <executable />
     </execution>
   </component>
+  <component name="CoverageViewManager">
+    <option name="myFlattenPackages" value="true" />
+    <option name="myAutoScrollFromSource" value="true" />
+    <option name="myElementSize" value="220" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="pluginUpdatePolicy" value="UPDATE" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
         <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="ProjectId" id="1QtBvDIvOwQtg0Tx3r4m42fXPN3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="it.slawekpaciorek.repo" />
+      <recent name="it.slawekpaciorek.parsers" />
+      <recent name="it.slawekpaciorek.services" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.slawekpaciorek" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/target" />
+      <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="it.slawekpaciorek.config" />
+      <recent name="it.slawekpaciorek.controllers" />
+      <recent name="it.slawekpaciorek.command" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,6 +125,101 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.App" />
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryDBServiceTest.shouldRetriveDataFromString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.services" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.services.InMemoryDBServiceTest" />
+      <option name="METHOD_NAME" value="shouldRetriveDataFromString" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryDBTest.shouldAddOrderToDB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.repo" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.repo.InMemoryDBTest" />
+      <option name="METHOD_NAME" value="shouldAddOrderToDB" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryDBTest.shouldCheckIfDBWorks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.repo" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.repo.InMemoryDBTest" />
+      <option name="METHOD_NAME" value="shouldCheckIfDBWorks" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InMemoryDBTest.shouldResetDataBase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ordering_system" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.slawekpaciorek.repo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.slawekpaciorek.repo" />
+      <option name="MAIN_CLASS_NAME" value="it.slawekpaciorek.repo.InMemoryDBTest" />
+      <option name="METHOD_NAME" value="shouldResetDataBase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="JUnit.InMemoryDBServiceTest.shouldRetriveDataFromString" />
+      <item itemvalue="JUnit.InMemoryDBTest.shouldCheckIfDBWorks" />
+      <item itemvalue="JUnit.InMemoryDBTest.shouldAddOrderToDB" />
+      <item itemvalue="JUnit.InMemoryDBTest.shouldResetDataBase" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.InMemoryDBTest.shouldResetDataBase" />
+        <item itemvalue="JUnit.InMemoryDBTest.shouldAddOrderToDB" />
+        <item itemvalue="JUnit.InMemoryDBTest.shouldCheckIfDBWorks" />
+        <item itemvalue="JUnit.InMemoryDBServiceTest.shouldRetriveDataFromString" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -57,10 +231,104 @@
       <option name="presentableId" value="Default" />
       <updated>1568580240716</updated>
       <workItem from="1568580245168" duration="2237000" />
+      <workItem from="1568658386798" duration="599000" />
+      <workItem from="1568659825818" duration="618000" />
+      <workItem from="1568667988066" duration="3599000" />
+      <workItem from="1568742468110" duration="10327000" />
+      <workItem from="1568828824350" duration="8002000" />
+      <workItem from="1568917175144" duration="8073000" />
+      <workItem from="1569003728618" duration="670000" />
+      <workItem from="1569103296616" duration="2497000" />
+      <workItem from="1569152655074" duration="12667000" />
+      <workItem from="1569270941724" duration="514000" />
+      <workItem from="1569341765300" duration="253000" />
+      <workItem from="1569342159428" duration="39000" />
+      <workItem from="1569342660034" duration="9330000" />
+      <workItem from="1569360415879" duration="245000" />
+      <workItem from="1569441724782" duration="9292000" />
+      <workItem from="1569523252531" duration="1679000" />
+      <workItem from="1569531529422" duration="1270000" />
+      <workItem from="1569778855736" duration="13735000" />
+      <workItem from="1569874069393" duration="5370000" />
+      <workItem from="1569954177009" duration="10449000" />
+      <workItem from="1570041704160" duration="8055000" />
+      <workItem from="1570130277099" duration="6114000" />
+      <workItem from="1570310972203" duration="2323000" />
+      <workItem from="1570348160515" duration="4101000" />
+      <workItem from="1570366326271" duration="5819000" />
+      <workItem from="1570395662989" duration="6846000" />
+      <workItem from="1570423208751" duration="19446000" />
+      <workItem from="1570481054272" duration="1479000" />
+      <workItem from="1570482575841" duration="712000" />
+      <workItem from="1570483315554" duration="65000" />
+      <workItem from="1570484110960" duration="191000" />
+      <workItem from="1570509660188" duration="6870000" />
+      <workItem from="1570524505276" duration="7758000" />
+      <workItem from="1570551949141" duration="1547000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java</url>
+          <line>104</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/parsers/CSVFileParser.java</url>
+          <line>21</line>
+          <properties class="it.slawekpaciorek.parsers.CSVFileParser" method="parsDataFromFile">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/it/slawekpaciorek/services/InMemoryDBService.java</url>
+          <line>128</line>
+          <properties class="it.slawekpaciorek.services.InMemoryDBService" method="getOrdersFromString">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="file" />
+      </configuration>
+      <configuration name="Application">
+        <watch expression="result" language="JAVA" />
+        <watch expression="orders" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/OrderingSystem$App.ic" NAME="App Coverage Results" MODIFIED="1570366439938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.slawekpaciorek.config.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/OrderingSystem$InMemoryDBServiceTest.ic" NAME="InMemoryDBServiceTest Coverage Results" MODIFIED="1570448101067" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>it.slawekpaciorek.services.*</FILTER>
+    </SUITE>
   </component>
 </project>

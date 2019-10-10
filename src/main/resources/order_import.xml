@@ -1,0 +1,37 @@
+<requests>
+    <request>
+        <clientId>1</clientId>
+        <requestId>1</requestId>
+        <name>Bułka</name>
+        <quantity>1</quantity>
+        <price>10.00</price>
+    </request>
+    <request>
+        <clientId>1</clientId>
+        <requestId>2</requestId>
+        <name>Chleb</name>
+        <quantity>2</quantity>
+        <price>15.00</price>
+    </request>
+    <request>
+        <clientId>1</clientId>
+        <requestId>2</requestId>
+        <name>Chleb</name>
+        <quantity>5</quantity>
+        <price>15.00</price>
+    </request>
+    <request>
+        <clientId>2</clientId>
+        <requestId>1</requestId>
+        <name>Chleb</name>
+        <quantity>2</quantity>
+        <price>15</price>
+    </request>
+    <request>
+        <clientId>2</clientId>
+        <requestId>1</requestId>
+        <name>Bułka</name>
+        <quantity>5</quantity>
+        <price>10.00</price>
+    </request>
+</requests>
